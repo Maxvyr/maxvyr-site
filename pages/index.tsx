@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Footer from '../components/footer'
+import TopBar from '../components/top_bar'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -13,6 +15,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+        <TopBar />
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -54,66 +57,7 @@ const Home: NextPage = () => {
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://github.com/maxvyr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {' '}
-          <span className={styles.logo}>
-            <Image src="/github.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-        <a
-          href="https://twitter.com/m4xvyr/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {' '}
-          <span className={styles.logo}>
-            <Image src="/twitter.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-        <a
-          href="https://instagram.com/m4xvyr/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {' '}
-          <span className={styles.logo}>
-            <Image src="/instagram.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-        <a
-          href="https://linkedin.com/in/maxime-vidalinc/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {' '}
-          <span className={styles.logo}>
-            <Image src="/linkedin.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-        <a
-          href="https://www.tiktok.com/@maxvyr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {' '}
-          <span className={styles.logo}>
-            <Image src="/tiktok.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-        <a
-          href="https://www.youtube.com/user/maxvid30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {' '}
-          <span className={styles.logo}>
-            <Image src="/youtube.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+        <Footer />
       </footer>
     </div>
   )
