@@ -10,7 +10,7 @@ const TopBar : NextPage = () => {
                 Front Developper
             </h2>
             <Link 
-                href="/screen/about"
+                href="/"
                 className={styles.items}
             >
                     <a>A Propos</a>
