@@ -15,6 +15,8 @@ const About : NextPage = () => {
                     <a>Back to home</a>
                     </Link>
                 </h2>
+                <p>Bonjour je m'appelle Maxime Vidalinc. Je suis un dev freelance spécialisée dans le développement front (ReactJS, NextJS) et coté mobile en (Flutter). \nPassionné par le développement informatique et les nouvelles technologies. \nJe programme et réalise le design d'applications \npour des clients dans le monde entier. \n</p>
+                <p>Language / Framework : Javascript Typescript, ReactJS, NextJS</p>
             </main>
 
             <footer className={styles.footer}>
