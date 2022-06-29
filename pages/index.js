@@ -7,6 +7,7 @@ import Header from "../components/Header/Header";
 import Nav from "../components/Nav/Nav";
 import Projects from "../components/Projects/Projects";
 import Skills from "../components/Skills/Skills";
+import { Airtable } from 'airtable';
 import { client } from "../config";
 
 export default function index({ about, works, skills }) {
@@ -53,6 +54,34 @@ export default function index({ about, works, skills }) {
 }
 
 export async function getServerSideProps() {
+const base = Airtable
+  .configure({
+    endpointUrl: 'https://api.airtable.com',
+    apiKey: process.env.AIRTABLE_API_KEY
+  })
+  .base('appVpp9nSNmoFNXBn');
+
+base('projects').select({
+  // Selecting the first 3 records in Grid view:
+  maxRecords: 3,
+  view: "Grid view"
+}).eachPage(function page(records, fetchNextPage) {
+  // This function (`page`) will get called for each page of records.
+
+  records.forEach(function(record) {
+      console.log('Retrieved', record.get('title'));
+  });
+
+    // To fetch the next page of records, call `fetchNextPage`.
+    // If there are more records, `page` will get called again.
+    // If there are no more records, `done` will get called.
+    fetchNextPage();
+
+}, function done(err) {
+    if (err) { console.error(err); return; }
+});
+
+
   const about = await client.fetch(`*[_type == "about"][0]{description}`);
   const works = await client.fetch(`*[_type == "works"] | order(_createdAt desc)`);
   const skills = await client.fetch(`*[_type == "skills"]{icon, title, _createdAt} | order(_createdAt asc)`);
