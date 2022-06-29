@@ -52,42 +52,45 @@ export default function index({ about, works, skills }) {
 }
 
 export async function getServerSideProps() {
-  // const works = [];
-Airtable.configure({
-    endpointUrl: 'https://api.airtable.com',
-    apiKey: process.env.AIRTABLE_API_KEY
-  });
+  //----------------------------------------
+  const works = [];
+  Airtable.configure({
+      endpointUrl: 'https://api.airtable.com',
+      apiKey: process.env.AIRTABLE_API_KEY
+    });
+    
+   const table = Airtable.base('appVpp9nSNmoFNXBn');
   
- const table = Airtable.base('appVpp9nSNmoFNXBn');
-
-table('projects').select({
-  // Selecting the first 3 records in Grid view:
-  maxRecords: 8,
-  view: "Grid view"
-}).eachPage(function page(records, fetchNextPage) {
-  // This function (`page`) will get called for each page of records.
-
-  records.forEach(function(record) {
-      // console.log('Retrieved', record.get('title'), record.get('description'), record.get('techno'),record.get('link_project'),record.get('link_code_base'),record.get('image_link'),);
-      console.log('Retrieve', record.getId());
-      // works.push(record.get("title"));
-  });
-
+  table('projects').select({
+    // Selecting the first 3 records in Grid view:
+    maxRecords: 8,
+  }).eachPage(function page(records, fetchNextPage) {
+    // This function (`page`) will get called for each page of records.
+    records.forEach(function(record) {
+      console.log('Retrieve', record["fields"]);
+      works.push(record["fields"]);
+    });
+    
+    console.log('works props', {works});
+    
     // To fetch the next page of records, call `fetchNextPage`.
     // If there are more records, `page` will get called again.
     // If there are no more records, `done` will get called.
-    fetchNextPage();
-
-}, function done(err) {
-    if (err) { 
-      console.error(err); return; 
-    }
-});
-
+      fetchNextPage();
+  
+  }, function done(err) {
+      if (err) { 
+        console.error(err); return; 
+      }
+      console.log("done");
+  });
+//----------------------------------------
 
   const about = await client.fetch(`*[_type == "about"][0]{description}`);
-  const works = await client.fetch(`*[_type == "works"] | order(_createdAt desc)`);
+  // const works = await client.fetch(`*[_type == "works"] | order(_createdAt desc)`);
   const skills = await client.fetch(`*[_type == "skills"]{icon, title, _createdAt} | order(_createdAt asc)`);
+
+  console.log(works)
 
   return {
     props: {
