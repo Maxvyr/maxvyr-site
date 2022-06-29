@@ -2,12 +2,10 @@ import Head from "next/head";
 import React from "react";
 import About from "../components/About/About";
 import Contact from "../components/Contact/Contact";
-import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
-import Nav from "../components/Nav/Nav";
 import Projects from "../components/Projects/Projects";
 import Skills from "../components/Skills/Skills";
-import { Airtable } from 'airtable';
+import Airtable from 'airtable';
 import { client } from "../config";
 
 export default function index({ about, works, skills }) {
@@ -54,22 +52,25 @@ export default function index({ about, works, skills }) {
 }
 
 export async function getServerSideProps() {
-const base = Airtable
-  .configure({
+  // const works = [];
+Airtable.configure({
     endpointUrl: 'https://api.airtable.com',
     apiKey: process.env.AIRTABLE_API_KEY
-  })
-  .base('appVpp9nSNmoFNXBn');
+  });
+  
+ const table = Airtable.base('appVpp9nSNmoFNXBn');
 
-base('projects').select({
+table('projects').select({
   // Selecting the first 3 records in Grid view:
-  maxRecords: 3,
+  maxRecords: 8,
   view: "Grid view"
 }).eachPage(function page(records, fetchNextPage) {
   // This function (`page`) will get called for each page of records.
 
   records.forEach(function(record) {
-      console.log('Retrieved', record.get('title'));
+      // console.log('Retrieved', record.get('title'), record.get('description'), record.get('techno'),record.get('link_project'),record.get('link_code_base'),record.get('image_link'),);
+      console.log('Retrieve', record.getId());
+      // works.push(record.get("title"));
   });
 
     // To fetch the next page of records, call `fetchNextPage`.
@@ -78,7 +79,9 @@ base('projects').select({
     fetchNextPage();
 
 }, function done(err) {
-    if (err) { console.error(err); return; }
+    if (err) { 
+      console.error(err); return; 
+    }
 });
 
 
