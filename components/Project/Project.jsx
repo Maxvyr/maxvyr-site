@@ -35,11 +35,6 @@ export default function Project({ work }) {
               }}>
               <a className='text-lg'>{work?.title}</a>
             </Link>
-            {/* <div className='flex gap-3'>
-              <Image src={Tailwind} width='25' height='25' alt='icon linkedin axel pointud' />
-              <Image src={Tailwind} width='25' height='25' alt='icon linkedin axel pointud' />
-              <Image src={Tailwind} width='25' height='25' alt='icon linkedin axel pointud' />
-            </div> */}
           </div>
         </article>
       ) : (

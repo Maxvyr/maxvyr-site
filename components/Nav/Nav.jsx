@@ -11,7 +11,7 @@ export default function Nav() {
   return (
     <nav className='fixed inset-0 flex justify-between items-center w-full h-[75px] px-[20px] z-10 effect-nav md:px-[90px]'>
       <Link href='/'>
-        <a className='text-white font-bold text-[25px] md:text-2xl'>AP</a>
+        <a className='text-white font-bold text-[25px] md:text-2xl'>MV</a>
       </Link>
 
       <div className='flex items-center'>
@@ -28,10 +28,10 @@ export default function Nav() {
           <Image src={IconLinkedin} width='25' height='25' alt='icon linkedin amaxvyr' />
         </a>
         <a className='ml-[15px]' href='https://www.youtube.com/user/maxvid30' target='_blank' rel='noreferrer'>
-          <Image src={IconYoutube} width='25' height='25' alt='icon linkedin amaxvyr' />
+          <Image src={IconYoutube} width='25' height='25' alt='icon youtube amaxvyr' />
         </a>
         <a className='ml-[15px]' href='https://www.tiktok.com/@maxvyr' target='_blank' rel='noreferrer'>
-          <Image src={IconTiktok} width='25' height='25' alt='icon linkedin amaxvyr' />
+          <Image src={IconTiktok} width='25' height='25' alt='icon tiktok amaxvyr' />
         </a>
       </div>
     </nav>
