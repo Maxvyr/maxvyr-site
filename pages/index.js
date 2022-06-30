@@ -52,7 +52,7 @@ export default function index({ about, works, skills }) {
 }
 
 export async function getServerSideProps() {
-  const about = await client.fetch(`*[_type == "about"][0]{description}`);
+  const about = await getAbout();
   const works = await getWorks();
   const skills = await client.fetch(`*[_type == "skills"]{icon, title, _createdAt} | order(_createdAt asc)`);
   return {
@@ -62,6 +62,17 @@ export async function getServerSideProps() {
       skills, 
     },
   };
+}
+
+async function getAbout() {
+  let response = await fetch("https://api.airtable.com/v0/appVpp9nSNmoFNXBn/about", {
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${process.env.AIRTABLE_API_KEY}`
+    },
+  });
+  const json = await response.json();
+  return json["records"][0];
 }
 
 
