@@ -4,8 +4,6 @@ import Link from "next/link";
 import { urlFor } from "../../config";
 
 export default function Project({ work }) {
-  console.log(work?.fields);
-
   return (
     <>
       {work ? (
@@ -13,7 +11,7 @@ export default function Project({ work }) {
           <Link
             href={{
               pathname: `/project/${work?.fields.title}`,
-              query: { id: work?._id },
+              query: { id: work?.id },
             }}>
             <a>
               <div className='rounded-lg hover:opacity-50s'>
@@ -21,7 +19,6 @@ export default function Project({ work }) {
                   className='rounded-lg cursor-pointer transition-all hover:opacity-50s object-cover'
                   width='1703'
                   height='965'
-                  // src={urlFor(work?.image?.asset?._ref).url()}
                   src={work?.fields?.image_link}
                   layout='responsive'
                   alt='projet maxvyr'
@@ -34,7 +31,7 @@ export default function Project({ work }) {
             <Link
               href={{
                 pathname: `/project/${work?.fields.title}`,
-                query: { id: work?._id },
+                query: { id: work?.id },
               }}>
               <a className='text-lg'>{work?.fields.title}</a>
             </Link>
