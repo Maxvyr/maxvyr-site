@@ -48,10 +48,7 @@ export default function project({ work }) {
 }
 
 export async function getServerSideProps(context) {
-  // const work = await client.fetch(`*[_type == "works" && _id == "${context.query.id}"]{title, image, description, github, demo}`);
-  console.log("slug ->", context.query.id);
   const work = await getWork(context.query.id);
-  console.log("slug ->", work);
   return {
     props: {
       work,
