@@ -2,11 +2,10 @@ import Head from "next/head";
 import React from "react";
 import About from "../components/About/About";
 import Contact from "../components/Contact/Contact";
-import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
-import Nav from "../components/Nav/Nav";
 import Projects from "../components/Projects/Projects";
 import Skills from "../components/Skills/Skills";
+import Airtable from 'airtable';
 import { client } from "../config";
 
 export default function index({ about, works, skills }) {
@@ -54,14 +53,28 @@ export default function index({ about, works, skills }) {
 
 export async function getServerSideProps() {
   const about = await client.fetch(`*[_type == "about"][0]{description}`);
-  const works = await client.fetch(`*[_type == "works"] | order(_createdAt desc)`);
+  // const works = await client.fetch(`*[_type == "works"] | order(_createdAt desc)`);
+  const works = await getWorks();
   const skills = await client.fetch(`*[_type == "skills"]{icon, title, _createdAt} | order(_createdAt asc)`);
 
+  console.log("works base", works);
   return {
     props: {
       about,
       works,
-      skills,
+      skills, 
     },
   };
+}
+
+
+async function getWorks() {
+  let response = await fetch("https://api.airtable.com/v0/appVpp9nSNmoFNXBn/projects", {
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${process.env.AIRTABLE_API_KEY}`
+    },
+  });
+  const json = await response.json();
+  return json["records"];
 }
