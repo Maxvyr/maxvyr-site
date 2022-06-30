@@ -65,24 +65,24 @@ export async function getServerSideProps() {
 }
 
 async function getAbout() {
-  let response = await fetch("https://api.airtable.com/v0/appVpp9nSNmoFNXBn/about", {
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${process.env.AIRTABLE_API_KEY}`
-    },
-  });
-  const json = await response.json();
+  const json = await getData("https://api.airtable.com/v0/appVpp9nSNmoFNXBn/about");
   return json["records"][0];
 }
 
 
  async function getWorks() {
-  let response = await fetch("https://api.airtable.com/v0/appVpp9nSNmoFNXBn/projects", {
+  const json = await getData("https://api.airtable.com/v0/appVpp9nSNmoFNXBn/projects")
+  return json["records"];
+}
+
+
+async function getData(url) {
+  let response = await fetch(url, {
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${process.env.AIRTABLE_API_KEY}`
     },
   });
   const json = await response.json();
-  return json["records"];
+  return json;
 }

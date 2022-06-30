@@ -2,9 +2,6 @@ import React from "react";
 import { Title, Text } from "../Typography/Typography";
 
 export default function About({ about }) {
-  console.log("about", about);
-  console.log("fields", about?.fields);
-  console.log("desc", about?.fields?.description);
   return (
     <section className='my-[220px] lg:flex lg:justify-between'>
       <div className='lg:w-6/12'>
