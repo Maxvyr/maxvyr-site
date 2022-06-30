@@ -5,7 +5,6 @@ import Contact from "../components/Contact/Contact";
 import Header from "../components/Header/Header";
 import Projects from "../components/Projects/Projects";
 import Skills from "../components/Skills/Skills";
-import Airtable from 'airtable';
 import { client } from "../config";
 
 export default function index({ about, works, skills }) {
@@ -56,8 +55,6 @@ export async function getServerSideProps() {
   // const works = await client.fetch(`*[_type == "works"] | order(_createdAt desc)`);
   const works = await getWorks();
   const skills = await client.fetch(`*[_type == "skills"]{icon, title, _createdAt} | order(_createdAt asc)`);
-
-  console.log("works base", works);
   return {
     props: {
       about,
@@ -68,7 +65,7 @@ export async function getServerSideProps() {
 }
 
 
-async function getWorks() {
+ async function getWorks() {
   let response = await fetch("https://api.airtable.com/v0/appVpp9nSNmoFNXBn/projects", {
     headers: {
       'Content-Type': 'application/json',
