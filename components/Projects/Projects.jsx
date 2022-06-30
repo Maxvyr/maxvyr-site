@@ -2,7 +2,7 @@ import Project from "../Project/Project";
 import { Title } from "../Typography/Typography";
 
 export default function Projects({ works }) {
-  console.log("works receive", {works});
+  // console.log("works receive", {works});
   return (
     <section>
       <Title>Projets</Title>

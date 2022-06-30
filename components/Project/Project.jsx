@@ -4,13 +4,15 @@ import Link from "next/link";
 import { urlFor } from "../../config";
 
 export default function Project({ work }) {
+  console.log(work?.fields);
+
   return (
     <>
       {work ? (
         <article>
           <Link
             href={{
-              pathname: `/project/${work?.title}`,
+              pathname: `/project/${work?.fields.title}`,
               query: { id: work?._id },
             }}>
             <a>
@@ -19,9 +21,10 @@ export default function Project({ work }) {
                   className='rounded-lg cursor-pointer transition-all hover:opacity-50s object-cover'
                   width='1703'
                   height='965'
-                  src={urlFor(work?.image?.asset?._ref).url()}
+                  // src={urlFor(work?.image?.asset?._ref).url()}
+                  src={work?.fields?.image_link}
                   layout='responsive'
-                  alt='projet axel pointud'
+                  alt='projet maxvyr'
                 />
               </div>
             </a>
@@ -30,10 +33,10 @@ export default function Project({ work }) {
           <div className='pt-2'>
             <Link
               href={{
-                pathname: `/project/${work?.title}`,
+                pathname: `/project/${work?.fields.title}`,
                 query: { id: work?._id },
               }}>
-              <a className='text-lg'>{work?.title}</a>
+              <a className='text-lg'>{work?.fields.title}</a>
             </Link>
           </div>
         </article>
