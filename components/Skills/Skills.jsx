@@ -11,16 +11,21 @@ export default function Skills({ skills }) {
       </div>
 
       <div className='grid grid-cols-3 gap-5 mt-12 lg:flex lg:flex-wrap lg:w-6/12 lg:mt-0 '>
-        {skills.map((skill, idx) => (
+        {skills.map((skill, idx) => {
+          const url = skill?.fields?.Attachments[0].url;
+          const title = skill?.fields?.title;
+          
+          return (
           <div key={idx} className='flex flex-col items-center'>
             <img
               className='w-[40px] h-[40px] md:w-[50px] md:h-[50px]'
-              src={urlFor(skill?.icon?.asset?._ref).url()}
+              src={url}
               alt='icon langage de programmation'
             />
-            <p className='text-sm text-center my-2'>{skill?.title}</p>
+            <p className='text-sm text-center my-2'>{title}</p>
           </div>
-        ))}
+        )
+      })},
       </div>
     </section>
   );

@@ -54,7 +54,8 @@ export default function index({ about, works, skills }) {
 export async function getServerSideProps() {
   const about = await getAbout();
   const works = await getWorks();
-  const skills = await client.fetch(`*[_type == "skills"]{icon, title, _createdAt} | order(_createdAt asc)`);
+  const skills = await getSkills();
+  
   return {
     props: {
       about,
@@ -69,9 +70,13 @@ async function getAbout() {
   return json["records"][0];
 }
 
-
- async function getWorks() {
+async function getWorks() {
   const json = await getData("https://api.airtable.com/v0/appVpp9nSNmoFNXBn/projects")
+  return json["records"];
+}
+
+ async function getSkills() {
+  const json = await getData("https://api.airtable.com/v0/appVpp9nSNmoFNXBn/skills")
   return json["records"];
 }
 
