@@ -52,9 +52,10 @@ export default function index({ about, works, skills }) {
 }
 
 export async function getServerSideProps() {
-  const about = await client.fetch(`*[_type == "about"][0]{description}`);
+  const about = await getAbout();
   const works = await getWorks();
-  const skills = await client.fetch(`*[_type == "skills"]{icon, title, _createdAt} | order(_createdAt asc)`);
+  const skills = await getSkills();
+  
   return {
     props: {
       about,
@@ -64,14 +65,29 @@ export async function getServerSideProps() {
   };
 }
 
+async function getAbout() {
+  const json = await getData("https://api.airtable.com/v0/appVpp9nSNmoFNXBn/about");
+  return json["records"][0];
+}
 
- async function getWorks() {
-  let response = await fetch("https://api.airtable.com/v0/appVpp9nSNmoFNXBn/projects", {
+async function getWorks() {
+  const json = await getData("https://api.airtable.com/v0/appVpp9nSNmoFNXBn/projects")
+  return json["records"];
+}
+
+ async function getSkills() {
+  const json = await getData("https://api.airtable.com/v0/appVpp9nSNmoFNXBn/skills")
+  return json["records"];
+}
+
+
+async function getData(url) {
+  let response = await fetch(url, {
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${process.env.AIRTABLE_API_KEY}`
     },
   });
   const json = await response.json();
-  return json["records"];
+  return json;
 }
