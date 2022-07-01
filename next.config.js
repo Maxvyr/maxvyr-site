@@ -8,7 +8,7 @@ const nextConfig = {
     ],
   },
   env: {
-    AIRTABLE_API_KEY: <YOUR_KEY>,
+    AIRTABLE_API_KEY: '',
   },
 };
 
