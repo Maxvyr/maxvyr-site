@@ -7,9 +7,9 @@ const nextConfig = {
       "i.imgur.com", 
     ],
   },
-  env: {
-    AIRTABLE_API_KEY: '',
-  },
+  // env: {
+  //   AIRTABLE_API_KEY: '',
+  // },
 };
 
 module.exports = nextConfig;
