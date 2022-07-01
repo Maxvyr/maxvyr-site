@@ -1,7 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { Title } from "../Typography/Typography";
-import Image from "next/image";
-import { urlFor } from "../../config";
 
 export default function Skills({ skills }) {
   return (
