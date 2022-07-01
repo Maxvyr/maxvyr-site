@@ -15,11 +15,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - Navigate to `cd maxvyr-site`  directory.
 
-- You need to rename `next.config.js.locol` to `next.config.js` and add you airtable api key 
+- You need to add and add you airtable api key to `next.config.js`
 ```js
-    env: {
-        AIRTABLE_API_KEY: <YOUR_KEY>,
-    },
+  env: {
+    AIRTABLE_API_KEY: '',
+  },
 ```
 
 - To install all the app dependencies on the command line run
