@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { Title, Text } from "../../components/Typography/Typography";
-import { client } from "../../config";
 import Head from "next/head";
 
 export default function project({ work }) {
