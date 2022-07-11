@@ -18,7 +18,8 @@ export default function Header() {
       </h2>
 
       <p className='text-gray text-lg mt-5 max-w-[580px] invisible opacity-0 translate-y-[50px] lg:text-[26px] lg:leading-[40px]' ref={txtRef}>
-      Bienvenue, je m'appel Maxime Vidalinc, développeur freelance Front End spécialisé ReactJS/NextJS.
+      {/* Bienvenue, je m'appel Maxime Vidalinc, développeur freelance Front End spécialisé ReactJS/NextJS. */}
+      Bienvenue, je m'appel Maxime Vidalinc, développeur freelance Front End Web/Mobile spécialisé en Flutter.
       </p>
     </header>
   );
