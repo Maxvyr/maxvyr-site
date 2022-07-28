@@ -2,13 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      "github.githubassets.com", 
-      "i.imgur.com", 
-    ],
+    domains: ["github.githubassets.com", "i.imgur.com"],
   },
   // env: {
-  //   AIRTABLE_API_KEY: '',
+  //   AIRTABLE_API_KEY: "",
   // },
 };
 

@@ -29,7 +29,7 @@ export default function Contact() {
         </a>
         <a
           className="text-white text-xl lg:text-2xl hover:text-gray transition-colors"
-          href="mailto:maxvyr@icloud.com"
+          href="mailto:contact@maxvyr.xyz"
           target="_blanck"
         >
           Email
