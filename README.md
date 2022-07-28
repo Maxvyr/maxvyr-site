@@ -35,13 +35,14 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 ## Author
 
 :man: **Maxime Vidalinc**
 
 - [GitHub](https://github.com/maxvyr)
 - [LinkedIn](https://www.linkedin.com/in/maxime-vidalinc/)
+- [Instagram](https://www.instagram.com/maxvyr_/)
+- [Tiktok](https://www.tiktok.com/@maxvyr)
 
 ## 🤝 Contributing
 - Contributions, issues, and feature requests are welcome!
