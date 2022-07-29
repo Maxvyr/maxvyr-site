@@ -51,7 +51,7 @@ export default function index({ about, works, skills }) {
         <title>Maxyr - Dev Front End</title>
       </Head>
 
-      <div className="container ">
+      <div className="container">
         <Header />
         <Projects works={works} />
         <About about={about} />

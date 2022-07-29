@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="container flex justify-between items-center flex-col py-[55px] sm:flex-row">
       <p>&copy; Site web personnel</p>
       <a
-        href="http://eepurl.com/hJKBFj"
+        href="https://go.maxvyr.com/newsletter"
         target="_blank"
         rel="noopener noreferrer"
       >
