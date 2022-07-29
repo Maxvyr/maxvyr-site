@@ -4,9 +4,9 @@ const nextConfig = {
   images: {
     domains: ["github.githubassets.com", "i.imgur.com"],
   },
-  // env: {
-  //   AIRTABLE_API_KEY: "",
-  // },
+  env: {
+    AIRTABLE_API_KEY: "keyO9esxmfdmS6i7c",
+  },
 };
 
 module.exports = nextConfig;

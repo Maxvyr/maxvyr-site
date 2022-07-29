@@ -10,28 +10,30 @@ export default function Project({ work }) {
             href={{
               pathname: `/project/${work?.fields.title}`,
               query: { id: work?.id },
-            }}>
+            }}
+          >
             <a>
-              <div className='rounded-lg hover:opacity-50s'>
+              <div className="rounded-3xl hover:opacity-80  hover:scale-105 hover:hover:origin-top">
                 <Image
-                  className='rounded-lg cursor-pointer transition-all hover:opacity-50s object-cover'
-                  width='1703'
-                  height='965'
+                  className="rounded-lg cursor-pointer transition-all object-cover"
+                  width="903"
+                  height="665"
                   src={work?.fields?.image_link}
-                  layout='responsive'
-                  alt='projet maxvyr'
+                  layout="responsive"
+                  alt="projet maxime vidalinc"
                 />
               </div>
             </a>
           </Link>
 
-          <div className='pt-2'>
+          <div className="pt-2">
             <Link
               href={{
                 pathname: `/project/${work?.fields.title}`,
                 query: { id: work?.id },
-              }}>
-              <a className='text-lg'>{work?.fields.title}</a>
+              }}
+            >
+              <a className="text-lg">{work?.fields.title}</a>
             </Link>
           </div>
         </article>
