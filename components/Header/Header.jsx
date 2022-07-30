@@ -1,36 +1,11 @@
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import { Divider } from "../Divider/Divider";
+import About from "../About/About";
 
 export default function Header() {
-  const titleRef = useRef();
-  const txtRef = useRef();
-
-  const TL = gsap.timeline();
-
-  useEffect(() => {
-    TL.to(titleRef.current, { autoAlpha: 1, y: 0, duration: 0.5 }).to(
-      txtRef.current,
-      { autoAlpha: 1, y: 0, duration: 0.8 },
-      "-=0.2"
-    );
-  }, [TL]);
-
   return (
-    <header className="py-[100px] lg:flex lg:gap-3 lg:justify-between">
-      <h2
-        className="text-white tracking-wide text-clamp-xl invisible opacity-0 translate-y-[50px]"
-        ref={titleRef}
-      >
-        Portfolio
-      </h2>
-
-      <p
-        className="text-gray text-lg mt-5 max-w-[580px] invisible opacity-0 translate-y-[50px] lg:text-[26px] lg:leading-[40px]"
-        ref={txtRef}
-      >
-        Bienvenue, je m'appel Maxime Vidalinc, développeur freelance Front End
-        spécialisé ReactJS/NextJS.
-      </p>
+    <header className="py-[100px] lg:flex flex-col items-center">
+      <About />
+      <Divider />
     </header>
   );
 }

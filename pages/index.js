@@ -1,12 +1,12 @@
 import Head from "next/head";
 import React from "react";
-import About from "../components/About/About";
 import Contact from "../components/Contact/Contact";
+import { Divider } from "../components/Divider/Divider";
 import Header from "../components/Header/Header";
 import Projects from "../components/Projects/Projects";
 import Skills from "../components/Skills/Skills";
 
-export default function index({ about, works, skills }) {
+export default function index({ works, skills }) {
   return (
     <>
       <Head>
@@ -54,8 +54,9 @@ export default function index({ about, works, skills }) {
       <div className="container">
         <Header />
         <Projects works={works} />
-        <About about={about} />
+        <Divider />
         <Skills skills={skills} />
+        <Divider />
         <Contact />
       </div>
     </>
@@ -63,24 +64,15 @@ export default function index({ about, works, skills }) {
 }
 
 export async function getServerSideProps() {
-  const about = await getAbout();
   const works = await getWorks();
   const skills = await getSkills();
 
   return {
     props: {
-      about,
       works,
       skills,
     },
   };
-}
-
-async function getAbout() {
-  const json = await getData(
-    "https://api.airtable.com/v0/appVpp9nSNmoFNXBn/about"
-  );
-  return json["records"][0];
 }
 
 async function getWorks() {

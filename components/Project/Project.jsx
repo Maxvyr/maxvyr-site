@@ -13,7 +13,7 @@ export default function Project({ work }) {
             }}
           >
             <a>
-              <div className="rounded-3xl hover:opacity-80  hover:scale-105 hover:hover:origin-top">
+              <div className="rounded-3xl hover:opacity-80  hover:scale-105 hover:origin-top">
                 <Image
                   className="rounded-lg cursor-pointer transition-all object-cover"
                   width="903"
@@ -33,7 +33,7 @@ export default function Project({ work }) {
                 query: { id: work?.id },
               }}
             >
-              <a className="text-lg">{work?.fields.title}</a>
+              <a className="text-slate-600 text-lg">{work?.fields.title}</a>
             </Link>
           </div>
         </article>

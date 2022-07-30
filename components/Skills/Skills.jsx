@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import { Title } from "../Typography/Typography";
+import { Title, SmallText } from "../Typography/Typography";
 
 export default function Skills({ skills }) {
   return (
-    <section className="pb-[220px] lg:flex lg:justify-between lg:items-baseline">
+    <section className="py-[50px] lg:flex lg:justify-between lg:items-baseline">
       <div className="lg:w-6/12">
         <Title>Skills</Title>
       </div>
@@ -20,7 +20,7 @@ export default function Skills({ skills }) {
                 src={url}
                 alt="icon langage de programmation"
               />
-              <p className="text-sm text-center my-3">{title}</p>
+              <SmallText>{title}</SmallText>
             </div>
           );
         })}

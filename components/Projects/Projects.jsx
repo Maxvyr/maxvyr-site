@@ -9,7 +9,7 @@ export default function Projects({ works }) {
       {works.length == 0 ? (
         <p>Pas de projets.</p>
       ) : (
-        <div className="grid gap-12 mt-[20px] mb-[50px] md:grid-cols-3">
+        <div className="grid gap-12 my-[50px] md:grid-cols-3">
           {works.map((work, id) => (
             <Project key={id} work={work} />
           ))}
