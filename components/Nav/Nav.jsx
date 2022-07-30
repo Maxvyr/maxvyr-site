@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function Nav() {
   return (
-    <nav className="fixed inset-0 flex justify-between items-center w-full h-[75px] px-[20px] z-10 effect-nav md:px-[90px]">
+    <nav className="fixed inset-0 flex justify-between items-center w-full h-[80px] px-[20px] z-10 effect-nav md:px-[90px]">
       <Link href="/">
         <a className="text-white font-bold text-[25px] md:text-2xl">MV</a>
       </Link>
@@ -21,19 +21,6 @@ export default function Nav() {
             width="25"
             height="25"
             alt="icon github maxvyr"
-          />
-        </a>
-        <a
-          className="ml-[15px]"
-          href="https://twitter.com/m4xvyr"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Image
-            src={IconTwitter}
-            width="25"
-            height="25"
-            alt="icon twitter maxvyr"
           />
         </a>
         <a
