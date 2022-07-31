@@ -1,5 +1,4 @@
 import IconGitHub from "/public/assets/icon-github.svg";
-import IconTwitter from "/public/assets/icon-twitter.svg";
 import IconInstagram from "/public/assets/icon-instagram.svg";
 import IconTiktok from "/public/assets/icon-tiktok.svg";
 import IconYoutube from "/public/assets/icon-youtube.svg";
@@ -11,7 +10,9 @@ export default function Nav() {
   return (
     <nav className="fixed inset-0 flex justify-between items-center w-full h-[80px] px-[20px] z-10 effect-nav md:px-[90px]">
       <Link href="/">
-        <a className="text-white font-bold text-[25px] md:text-2xl">MV</a>
+        <a className="text-white font-bold text-[25px] md:text-2xl">
+          Maxime Vidalinc
+        </a>
       </Link>
 
       <div className="flex items-center">
