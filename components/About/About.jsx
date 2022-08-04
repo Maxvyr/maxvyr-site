@@ -9,9 +9,8 @@ export default function About() {
       </div>
       <div className="mt-5 lg:w-6/12 ">
         <Text>
-          Bonjour 👋 je m'appelle Maxime Vidalinc. Je suis un Développeur Front
-          End Freelance. Passionné par le développement informatique et les
-          nouvelles technologies.
+          Bonjour 👋 je m'appelle Maxime Vidalinc. Tu as besoin d'une application Android ou iOS, tu es aux bons
+          endroits.
         </Text>
       </div>
     </section>
