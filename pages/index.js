@@ -46,7 +46,7 @@ export default function index({ works, skills }) {
           property="twitter:description"
           content="Bonjour, je m'appelle Maxime Vidalinc et je suis un développeur front end spécialisé en ReactJS / Next JS. Bienvenur sur mon portefolio."
         />
-        <meta property="twitter:image" content=""></meta>
+        <meta property="twitter:image" content=""/>
         <link rel="shortcut icon" href="/public/images/favicon.ico" />
         <title>Maxyr - Dev Front End</title>
       </Head>
