@@ -15,11 +15,11 @@ export default function index({ works, skills }) {
         <title>Maxyr - Dev Front End</title>
         <meta
           name="title"
-          content="Maxime Vidalinc Developpeur Front End / ReactJS"
+          content="Maxime Vidalinc Developpeur Mobile / Flutter - Swift"
         />
         <meta
           name="description"
-          content="Bonjour, je m'appelle Maxime Vidalinc et je suis un développeur front end spécialisé en ReactJS / Next JS. Bienvenur sur mon portefolio."
+          content="Bonjour, je m'appelle Maxime Vidalinc et je suis un développeur mobile. Bienvenur sur mon portefolio."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://maxvyr.com/" />
@@ -29,26 +29,26 @@ export default function index({ works, skills }) {
         />
         <meta
           property="og:description"
-          content="Bonjour, je m'appelle Maxime Vidalinc et je suis un développeur front end spécialisé en ReactJS / Next JS. Bienvenur sur mon portefolio."
+          content="Bonjour, je m'appelle Maxime Vidalinc et je suis un développeur mobile. Bienvenur sur mon portefolio."
         />
         <meta
           property="og:image"
-          content="Bonjour, je m'appelle Maxime Vidalinc et je suis un développeur front end spécialisé en ReactJS / Next JS. Bienvenur sur mon portefolio."
+          content="Bonjour, je m'appelle Maxime Vidalinc et je suis un développeur mobile. Bienvenur sur mon portefolio."
         />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://maxvyr.com/" />
         <meta
           property="twitter:title"
-          content="Maxime Vidalinc Developpeur Front End / ReactJS"
+          content="Maxime Vidalinc Developpeur Mobile / Flutter - Swift"
         />
         <meta
           property="twitter:description"
-          content="Bonjour, je m'appelle Maxime Vidalinc et je suis un développeur front end spécialisé en ReactJS / Next JS. Bienvenur sur mon portefolio."
+          content="Bonjour, je m'appelle Maxime Vidalinc et je suis un développeur mobile. Bienvenur sur mon portefolio."
         />
         <meta property="twitter:image" content=""/>
         <link rel="shortcut icon" href="/public/images/favicon.ico" />
-        <title>Maxyr - Dev Front End</title>
+        <title>Maxyr - Dev Mobile</title>
       </Head>
 
       <div className="container">
