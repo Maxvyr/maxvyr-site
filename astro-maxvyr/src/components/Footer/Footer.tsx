@@ -5,7 +5,7 @@ export default function Footer() {
   const yearDate = new Date().getFullYear();
   return (
     <footer className="container flex justify-between items-center flex-col py-[55px]">
-      {/* TODO tailwindcss divider */}
+      <div className="divide-solid"></div>
       <div className="container flex justify-evenly flex-col sm:flex-row">
         <SmallText>&copy; {yearDate} Maxvyr </SmallText>
         <a
