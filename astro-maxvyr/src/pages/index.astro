@@ -4,14 +4,14 @@ import Header from '../components/Header/Header';
 import Projects from '../components/Projects/Projects';
 import Skills from '../components/Skills/Skills';
 import Contact from '../components/Contact/Contact';
-import Card from '../components/Card.astro';
+// import Card from '../components/Card.astro';
 
 
 const getData = async (url: string) => {
   let response = await fetch(url, {
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}`,
+      Authorization: `Bearer ${import.meta.env.VITE_AIRTABLE_API_KEY}`,
     },
   });
   const json = await response.json();
