@@ -1,0 +1,13 @@
+---
+import Skills from "./React/Skills/Skills";
+
+export interface Props {
+	skills:  any[];
+}
+
+const { skills } = Astro.props;
+
+---
+
+
+<Skills skills={skills} />

@@ -1,0 +1,12 @@
+---
+import Projects from "./React/Projects/Projects";
+
+export interface Props {
+	works:  any[];
+}
+
+const { works } = Astro.props;
+
+---
+
+<Projects works={works} />
