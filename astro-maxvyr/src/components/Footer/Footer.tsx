@@ -21,8 +21,8 @@ export default function Footer() {
           <a target="_blank" href="https://icons8.com" className="font-bold">
             Icons8,
           </a>{" "}
-          <a target="_blank" href="https://nextjs.org/" className="font-bold">
-            Next JS,
+          <a target="_blank" href="https://astro.build/" className="font-bold">
+            Astro,
           </a>{" "}
           <a
             target="_blank"

@@ -3,7 +3,7 @@ import Footer from "../Footer/Footer";
 import type { ReactNode } from "react";
 
 type ContainerProps = {
-  children: ReactNode;
+  children?: ReactNode;
 };
 
 export default function Container({ children }: ContainerProps) {
