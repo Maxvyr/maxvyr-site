@@ -1,45 +1,56 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Header from '../components/Header/Header';
+import Projects from '../components/Projects/Projects';
+import Skills from '../components/Skills/Skills';
+import Contact from '../components/Contact/Contact';
+import Card from '../components/Card.astro';
+
+
+const getData = async (url: string) => {
+  let response = await fetch(url, {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}`,
+    },
+  });
+  const json = await response.json();
+  return json;
+}
+
+const getWorks = async ()  => {
+  const json = await getData(
+    "https://api.airtable.com/v0/appVpp9nSNmoFNXBn/projects"
+  );
+  return json["records"];
+}
+
+const  getSkills = async  () => {
+  const json = await getData(
+    "https://api.airtable.com/v0/appVpp9nSNmoFNXBn/skills"
+  );
+  return json["records"];
+}
+const works = await getWorks();
+const skills = await getSkills();
+
 ---
 
-<Layout title="Welcome to Astro.">			
+<Layout title="Maxvyr">			
 	<Header />
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-			<Card
-				href="./second"
-				title="Route"
-				body="Go"
-			/>
-		</ul>
-	</main>
+	<div class="p-8 bg-grey">
+		<Projects works={works} />
+		<div class="divide-solid"></div>
+		<Skills skills={skills} />
+		<div class="divide-solid"></div>
+		<Contact />
+	</div>
+
+	<!-- <Card
+	href="./second"
+	title="Route"
+	body="Go"
+/> -->
 </Layout>
 
 <style>

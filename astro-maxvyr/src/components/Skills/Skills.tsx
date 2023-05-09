@@ -1,7 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 import { Title, SmallText } from "../Typography/Typography";
 
-export default function Skills({ skills }) {
+export default function Skills({ skills }: { skills: any[] }) {
   return (
     <section className="py-[50px] lg:flex lg:justify-between lg:items-baseline">
       <div className="lg:w-6/12">

@@ -1,7 +1,7 @@
 import Project from "../Project/Project";
 import { Title } from "../Typography/Typography";
 
-export default function Projects({ works }) {
+export default function Projects({ works }: { works: any[] }) {
   // console.log("works receive", {works});
   return (
     <section>

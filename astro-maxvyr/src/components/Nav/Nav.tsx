@@ -6,7 +6,7 @@ import IconLinkedin from "/public/assets/icon-linkedin.svg";
 
 export default function Nav() {
   return (
-    <nav className="fixed inset-0 flex justify-between items-center w-full h-[80px] px-[20px] z-10 effect-nav md:px-[90px]">
+    <nav className="fixed inset-0 flex justify-between items-center w-full h-[80px] px-[20px] z-10 effect-nav md:px-[90px]  bg-gray-600">
       <a className="text-white font-bold text-[25px] md:text-2xl" href="/">
         Maxime Vidalinc
       </a>
