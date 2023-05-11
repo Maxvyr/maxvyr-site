@@ -1,0 +1,36 @@
+---
+import SmallText from "./SmallText.astro";
+import Title from "./Title.astro";
+
+export interface Props {
+	skills:  any[];
+}
+
+const { skills } = Astro.props;
+
+---
+
+
+<section class="py-[50px] lg:flex lg:justify-between lg:items-baseline">
+	<div class="lg:w-6/12">
+		<Title>Skills</Title>
+	</div>
+
+	<div class="grid grid-cols-3 gap-10 mt-12 lg:flex lg:flex-wrap lg:w-6/12 lg:mt-0 ">
+		{skills.map((skill, idx) => {
+			const url = skill?.fields?.Attachments[0].url;
+			const title = skill?.fields?.title;
+
+			return (
+				<div class="flex flex-col items-center">
+					<img
+						class="w-[50px] h-[50px] md:w-[40px] md:h-[50px]"
+						src={url}
+						alt="icon langage de programmation"
+					/>
+					<SmallText>{title}</SmallText>
+				</div>
+			);
+		})}
+	</div>
+</section>

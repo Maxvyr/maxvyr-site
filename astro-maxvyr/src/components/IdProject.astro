@@ -1,0 +1,49 @@
+---
+import Title from "./Title.astro";
+import Text from "./Text.astro";
+import type { Work } from "../model/work";
+
+export interface Props {
+	work:  Work;
+}
+
+
+
+const { work } = Astro.props;
+---
+
+    <div>
+      <div class="container">
+        <div class="pt-[50px] max-w-[780px] mt-3 lg:flex lg:gap-3 lg:justify-between lg:flex-col">
+          <Title>{work?.fields.title}</Title>
+          <Text>{work?.fields.description}</Text>
+          <div class="py-3">
+            <img
+              class="rounded-3xl transition-all hover:opacity-50s object-cover"
+              width="1503"
+              height="965"
+              src={work?.fields.image_link}
+              alt="project maxime vidalinc"
+            />
+          </div>
+          <div class="flex lg:justify-around  gap-3 my-10">
+            <a
+              class="px-[50px] py-[10px] border-2 rounded-lg text-black border-black hover:border-gray hover:scale-105 hover:bg-white hover:text-black"
+              href={`${work?.fields.link_code_base}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Voir le code
+            </a>
+            <a
+              class="px-[50px] py-[10px] border-2 rounded-lg text-black border-black hover:border-gray hover:scale-105 hover:bg-white hover:text-black"
+              href={`${work?.fields.link_project}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Voir le projet
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
