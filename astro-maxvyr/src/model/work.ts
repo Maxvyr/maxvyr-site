@@ -5,8 +5,8 @@ export type Work = {
     description: string;
     title: string;
     image_link: string;
-    link_code_base: string;
-    link_project: string;
+    link_code_base?: string;
+    link_project?: string;
     techno: string[];
   };
 };

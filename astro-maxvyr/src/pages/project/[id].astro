@@ -23,7 +23,6 @@ const getWork = async (idWork: string) => {
 }
 
 const { id } = Astro.params;
-// const { title } = Astro.props;
 const work = await getWork(id!);
 
 ---
