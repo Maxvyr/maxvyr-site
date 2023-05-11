@@ -1,4 +1,3 @@
-import React from "react";
 import { Title, Text } from "../Typography/Typography";
 
 export default function About() {
@@ -9,8 +8,8 @@ export default function About() {
       </div>
       <div className="mt-5 lg:w-6/12 ">
         <Text>
-          Bonjour 👋 je m'appelle Maxime Vidalinc. Tu as besoin d'une application Android ou iOS, tu es aux bons
-          endroits.
+          Bonjour 👋 je m'appelle Maxime Vidalinc. Tu as besoin d'une
+          application Android ou iOS, tu es aux bons endroits.
         </Text>
       </div>
     </section>
