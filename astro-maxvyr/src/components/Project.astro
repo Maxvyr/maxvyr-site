@@ -1,0 +1,34 @@
+---
+import type { Work } from '../model/work';
+
+export interface Props {
+	work:  Work;
+  key: number;
+}
+
+
+
+const { work, key } = Astro.props;
+---
+
+<div>
+    <article>
+      <a href={`/project/${work?.id}`}>
+          <div class="rounded-3xl hover:opacity-80  hover:scale-105 hover:origin-top">
+            <img
+              class="rounded-lg cursor-pointer transition-all object-cover"
+              width="903"
+              height="665"
+              src={work?.fields?.image_link}
+              alt="projet maxime vidalinc"
+            />
+          </div>
+      </a>
+
+      <div class="pt-2">
+        <a class="text-slate-600 text-lg" href={`/project/${work?.fields.title}`}>
+          {work?.fields.title}
+        </a>
+      </div>
+    </article>
+</div>

@@ -1,0 +1,23 @@
+---
+
+---
+<div class="divider"></div>
+
+<style>
+  .divider {
+  height: 1px;
+  width: 100%;
+  background: black;
+  right: 0px;
+  bottom: -10px;
+  transform: scaleX(0);
+  animation: dividerAnim 1s ease-in-out forwards;
+  transform-origin: center;
+}
+
+@keyframes dividerAnim {
+  100% {
+    transform: scaleX(1);
+  }
+}
+</style>

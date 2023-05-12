@@ -1,0 +1,24 @@
+---
+import type { Work } from "../model/work";
+import Project from "./Project.astro";
+import Title from "./Title.astro";
+
+export interface Props {
+	works:  Work[];
+}
+
+const { works } = Astro.props;
+
+---
+<section>
+  <Title>Projets</Title>
+  {works.length == 0 ? (
+    <p>Pas de projets.</p>
+  ) : (
+    <div class="grid gap-12 my-[50px] md:grid-cols-3">
+      {works.map((work, id) => (
+        <Project key={id} work={work} />
+      ))}
+    </div>
+  )}
+</section>

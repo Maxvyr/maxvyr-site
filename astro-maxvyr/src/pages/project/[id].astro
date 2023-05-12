@@ -1,0 +1,32 @@
+---
+import IdProject from "../../components/IdProject.astro";
+import Layout from "../../layouts/Layout.astro";
+import type { Work } from "../../model/work";
+
+export interface Props {
+	// title: string;
+  idWork: string;
+}
+
+const getWork = async (idWork: string) => {
+  let response = await fetch(
+    `https://api.airtable.com/v0/appVpp9nSNmoFNXBn/projects/${idWork}`,
+    {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${import.meta.env.VITE_AIRTABLE_API_KEY}`,
+      },
+    }
+    );
+    const json = await response.json();
+  return json as Work;
+}
+
+const { id } = Astro.params;
+const work = await getWork(id!);
+
+---
+
+<Layout title="AZ" >
+  <IdProject work={work} />
+</Layout>
