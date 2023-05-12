@@ -1,13 +1,13 @@
-import IconGitHub from "/public/assets/icon-github.svg";
-import IconInstagram from "/public/assets/icon-instagram.svg";
-import IconTiktok from "/public/assets/icon-tiktok.svg";
-import IconYoutube from "/public/assets/icon-youtube.svg";
-import IconLinkedin from "/public/assets/icon-linkedin.svg";
+import IconGitHub from "../../public/assets/icon-github.svg";
+import IconInstagram from "../../public/assets/icon-instagram.svg";
+import IconTiktok from "../../public/assets/icon-tiktok.svg";
+import IconYoutube from "../../public/assets/icon-youtube.svg";
+import IconLinkedin from "../../public/assets/icon-linkedin.svg";
 import { Link } from "@remix-run/react";
 
 export default function Nav() {
   return (
-    <nav className="fixed inset-0 flex justify-between items-center w-full h-[80px] px-[20px] z-10 effect-nav md:px-[90px]">
+    <nav className="bg-black/50 fixed inset-0 flex justify-between items-center w-full h-[80px] px-[20px] z-10 effect-nav md:px-[90px]">
       <Link to="/" className="text-white font-bold text-[25px] md:text-2xl">
         Maxime Vidalinc
       </Link>

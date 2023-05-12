@@ -3,7 +3,9 @@ type TypoProps = {
 };
 
 export function Title({ children }: TypoProps) {
-  return <h2 className="text-black tracking-wide text-clamp-xl">{children}</h2>;
+  return (
+    <h2 className="text-black tracking-wide text-4xl font-bold">{children}</h2>
+  );
 }
 
 export function Text({ children }: TypoProps) {

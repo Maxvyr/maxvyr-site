@@ -8,6 +8,8 @@ import type { LoaderArgs, V2_MetaFunction } from "@remix-run/node";
 import { getWorks } from "../../model/work.server";
 import { getSkills } from "../../model/skill.server";
 import { useLoaderData } from "@remix-run/react";
+import Nav from "../../components/Nav/Nav";
+import Footer from "../../components/Footer/Footer";
 
 export const meta: V2_MetaFunction = () => {
   return [{ title: "New Remix App" }];
@@ -23,7 +25,7 @@ export async function loader({ request, params }: LoaderArgs) {
 export default function Index() {
   const { works, skills } = useLoaderData<typeof loader>();
   return (
-    <div className="container">
+    <div>
       <Header />
       <Projects works={works} />
       <Divider />

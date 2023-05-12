@@ -5,7 +5,7 @@ import { SmallText } from "../Typography/Typography";
 export default function Footer() {
   const yearDate = new Date().getFullYear();
   return (
-    <footer className="container flex justify-between items-center flex-col py-[55px]">
+    <footer className="flex justify-between items-center flex-col py-[50px]">
       <Divider />
       <div className="container flex justify-evenly flex-col sm:flex-row">
         <SmallText>&copy; {yearDate} Maxvyr </SmallText>
