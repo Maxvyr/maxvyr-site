@@ -1,4 +1,4 @@
-import type { Work } from "../../model/work";
+import type { Work } from "../../model/work.server";
 import Project from "../Project/Project";
 import { Title } from "../Typography/Typography";
 

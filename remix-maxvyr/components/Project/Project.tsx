@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react";
-import type { Work } from "../../model/work";
+import type { Work } from "../../model/work.server";
 
 type ProjectWork = {
   work: Work;
