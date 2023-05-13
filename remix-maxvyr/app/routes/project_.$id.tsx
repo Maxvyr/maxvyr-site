@@ -39,7 +39,11 @@ export default function IdProject() {
           </a>
           <a
             className="px-[50px] py-[10px] border-2 rounded-lg text-black border-black hover:border-gray hover:scale-105 hover:bg-white hover:text-black"
-            href={`${work.fields.link_project}`}
+            href={
+              work.fields.link_project.length === 0
+                ? "https://github.com"
+                : `${work.fields.link_project}`
+            }
             target="_blank"
             rel="noreferrer"
           >

@@ -2,7 +2,7 @@ import type { Skill } from "../../model/skill.server";
 import { Title, SmallText } from "../Typography/Typography";
 
 type SkillsProps = {
-  skills: Skill[]; //TODO : type it
+  skills: Skill[];
 };
 
 export default function Skills({ skills }: SkillsProps) {
