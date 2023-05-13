@@ -10,7 +10,7 @@ export default function Project({ work }: ProjectWork) {
     <>
       {work ? (
         <article>
-          <Link to={`/project/${work?.fields.title}?id=${work?.id}`}>
+          <Link to={`/project/${work?.id}`}>
             <div className="rounded-3xl hover:opacity-80  hover:scale-105 hover:origin-top">
               <img
                 className="rounded-lg cursor-pointer transition-all object-cover"
@@ -23,7 +23,7 @@ export default function Project({ work }: ProjectWork) {
           </Link>
 
           <div className="pt-2">
-            <Link to={`/project/${work?.fields.title}?id=${work?.id}`}>
+            <Link to={`/project/${work?.id}`}>
               <p className="text-slate-600 text-lg">{work?.fields.title}</p>
             </Link>
           </div>
