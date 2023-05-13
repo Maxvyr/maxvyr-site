@@ -20,4 +20,18 @@ const getWorks = async () => {
   return json["records"] as Work[];
 };
 
-export { getWorks };
+const getWork = async (idWork: string) => {
+  let response = await fetch(
+    `https://api.airtable.com/v0/appVpp9nSNmoFNXBn/projects/${idWork}`,
+    {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}`,
+      },
+    }
+  );
+  const json = await response.json();
+  return json as Work;
+};
+
+export { getWorks, getWork };
