@@ -9,8 +9,11 @@ export default function About() {
       </div>
       <div className="mt-5 lg:w-6/12 ">
         <Text>
-          Bonjour 👋 je m'appelle Maxime Vidalinc. Tu as besoin d'une application Android ou iOS, tu es aux bons
-          endroits.
+          Hi I'm Maxime 👋. I share my journey making a living my projects, exit
+          my salary job in december 2023 to bootstrap in solo. I build projects
+          to be free! If you are interested in becoming free, follow my
+          adventures around the world! I document everything on this website,
+          twitter and my podcast.
         </Text>
       </div>
     </section>

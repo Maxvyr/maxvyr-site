@@ -1,5 +1,5 @@
 import IconGitHub from "../../public/assets/icon-github.svg";
-import IconInstagram from "../../public/assets/icon-instagram.svg";
+import IconTwitter from "../../public/assets/icon-twitter.svg";
 import IconTiktok from "../../public/assets/icon-tiktok.svg";
 import IconYoutube from "../../public/assets/icon-youtube.svg";
 import IconLinkedin from "../../public/assets/icon-linkedin.svg";
@@ -23,12 +23,12 @@ export default function Nav() {
         </a>
         <a
           className="ml-[15px]"
-          href="https://www.instagram.com/maxvyr_"
+          href="https://twitter.com/maxvyr_"
           target="_blank"
           rel="noreferrer"
         >
           <img
-            src={IconInstagram}
+            src={IconTwitter}
             width="25"
             height="25"
             alt="icon instagram maxvyr"

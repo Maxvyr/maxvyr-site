@@ -25,7 +25,7 @@ export async function loader({ request, params }: LoaderArgs) {
 export default function Index() {
   const { works, skills } = useLoaderData<typeof loader>();
   return (
-    <div>
+    <div className="mx-6">
       <Header />
       <Projects works={works} />
       <Divider />

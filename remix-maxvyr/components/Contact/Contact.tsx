@@ -22,10 +22,10 @@ export default function Contact() {
         </a>
         <a
           className="text-slate-600 text-xl lg:text-2xl hover:scale-105 hover:opacity-70 transition-colors"
-          href="https://www.instagram.com/maxvyr_/"
+          href="https://twitter.com/maxvyr_"
           target="_blanck"
         >
-          Instagram
+          Twitter
         </a>
         <a
           className="text-slate-600 text-xl lg:text-2xl hover:scale-105 hover:opacity-70 transition-colors"
