@@ -9,15 +9,13 @@ export default function Project({ work }: ProjectWork) {
   return (
     <>
       {work ? (
-        <article>
+        <article className="hover:opacity-80  hover:scale-105 hover:origin-top">
           <Link to={`/project/${work?.id}`}>
-            <div className="rounded-3xl hover:opacity-80  hover:scale-105 hover:origin-top">
+            <div className="rounded-3xl">
               <img
                 className="rounded-lg cursor-pointer transition-all object-cover"
-                width="903"
-                height="665"
                 src={work?.fields?.image_link}
-                alt="projet maxime vidalinc"
+                alt={work?.fields.title}
               />
             </div>
           </Link>
