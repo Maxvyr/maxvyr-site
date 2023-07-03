@@ -8,8 +8,6 @@ import type { LoaderArgs, V2_MetaFunction } from "@remix-run/node";
 import { getWorks } from "../../model/work.server";
 import { getSkills } from "../../model/skill.server";
 import { useLoaderData } from "@remix-run/react";
-import Nav from "../../components/Nav/Nav";
-import Footer from "../../components/Footer/Footer";
 
 export const meta: V2_MetaFunction = () => {
   return [{ title: "New Remix App" }];

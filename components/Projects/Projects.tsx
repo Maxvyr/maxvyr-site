@@ -11,7 +11,7 @@ export default function Projects({ works }: ProjectsProps) {
     <section>
       <Title>Projets</Title>
       {works.length == 0 ? (
-        <p>Pas de projets.</p>
+        <p>😭 Nothing to show 😭</p>
       ) : (
         <div className="grid gap-12 my-[50px] md:grid-cols-3">
           {works.map((work, id) => (
