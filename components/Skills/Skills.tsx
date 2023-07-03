@@ -20,9 +20,9 @@ export default function Skills({ skills }: SkillsProps) {
           return (
             <div key={idx} className="flex flex-col items-center">
               <img
-                className="w-[50px] h-[50px] md:w-[40px] md:h-[50px]"
+                className="w-[40px] h-[50px] md:w-[40px] md:h-[50px]"
                 src={url}
-                alt="icon langage de programmation"
+                alt="icon programming language"
               />
               <SmallText>{title}</SmallText>
             </div>

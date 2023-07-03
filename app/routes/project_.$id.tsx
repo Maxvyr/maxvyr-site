@@ -25,7 +25,7 @@ export default function IdProject() {
             width="1503"
             height="965"
             src={work.fields.image_link}
-            alt="project maxime vidalinc"
+            alt={work.fields.title}
           />
         </div>
         <div className="flex lg:justify-around  gap-3 my-10">
@@ -35,7 +35,7 @@ export default function IdProject() {
             target="_blank"
             rel="noreferrer"
           >
-            Voir le code
+            See codebase
           </a>
           <a
             className="px-[50px] py-[10px] border-2 rounded-lg text-black border-black hover:border-gray hover:scale-105 hover:bg-white hover:text-black"
@@ -47,7 +47,7 @@ export default function IdProject() {
             target="_blank"
             rel="noreferrer"
           >
-            Voir le projet
+            See project
           </a>
         </div>
       </div>

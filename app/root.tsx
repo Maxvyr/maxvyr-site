@@ -55,7 +55,7 @@ export default function App() {
         />
         <meta
           property="twitter:description"
-          content="Hi my name is Maxime Vidalinc I am a solomaker. Welcome ;p."
+          content="Hi my name is Maxime Vidalinc I am a solomaker. Welcome 😜"
         />
         <meta property="twitter:image" content="" />
         <link rel="shortcut icon" href="/favicon.ico" />

@@ -14,11 +14,11 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <SmallText>S'incrire à la newsletter</SmallText>
+          <SmallText>Subscribe to newsletter</SmallText>
         </a>
 
         <SmallText>
-          Merci spécial à{" "}
+          Special Thanks to {" "}
           <a
             target="_blank"
             href="https://icons8.com"
