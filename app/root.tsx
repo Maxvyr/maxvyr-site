@@ -23,6 +23,11 @@ export default function App() {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <script
+          defer
+          data-domain="maxvyr.com"
+          src="https://plausible.io/js/script.js"
+        ></script>
         <title>Maxvyr - Solomaker</title>
         <meta
           name="title"
