@@ -16,9 +16,16 @@ export default function Footer() {
         >
           <SmallText>Subscribe to newsletter</SmallText>
         </a>
+        <a
+          href="https://maxvyr.notion.site/Blog-2fc8fb2b529f42b5baecbf170d35452c?pvs=4"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <SmallText>Blog</SmallText>
+        </a>
 
         <SmallText>
-          Special Thanks to {" "}
+          Special Thanks to{" "}
           <a
             target="_blank"
             href="https://icons8.com"
