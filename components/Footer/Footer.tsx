@@ -23,34 +23,6 @@ export default function Footer() {
         >
           <SmallText>Blog</SmallText>
         </a>
-
-        <SmallText>
-          Special Thanks to{" "}
-          <a
-            target="_blank"
-            href="https://icons8.com"
-            className="font-bold"
-            rel="noreferrer"
-          >
-            Icons8,
-          </a>{" "}
-          <a
-            target="_blank"
-            href="https://remix.run/"
-            className="font-bold"
-            rel="noreferrer"
-          >
-            Remix,
-          </a>{" "}
-          <a
-            target="_blank"
-            href="https://tailwindcss.com/"
-            className="font-bold"
-            rel="noreferrer"
-          >
-            Tailwind
-          </a>{" "}
-        </SmallText>
       </div>
     </footer>
   );
