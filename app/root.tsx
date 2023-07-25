@@ -24,9 +24,9 @@ export default function App() {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <script
-          defer
-          data-domain="maxvyr.com"
-          src="https://plausible.io/js/script.js"
+          data-goatcounter="https://pandamy.goatcounter.com/count"
+          async
+          src="//gc.zgo.at/count.js"
         ></script>
         <title>Maxvyr - Solomaker</title>
         <meta
