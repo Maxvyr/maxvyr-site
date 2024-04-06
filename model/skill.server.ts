@@ -39,7 +39,7 @@ const SkillSchema = z.object({
 
 export type Skill = z.infer<typeof SkillSchema>;
 
-const getSkills = async () => {
+const getSkills: () => Promise<Skill[]> = async () => {
   const json = await getData(
     "https://api.airtable.com/v0/appVpp9nSNmoFNXBn/skills"
   );
